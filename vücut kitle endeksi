@@ -1,0 +1,47 @@
+Public Class Form1
+ 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        TxtVki.Text = TxtKilo.Text / (TxtBoy.Text * TxtBoy.Text)
+ 
+        'Vücut kitle indeksi=ağırlık (kg) / boyun (m) karesi.
+ 
+        'www.tasarimkodlama.com
+        If TxtVki.Text <= 19 Then
+            TxtSonuc.Text = "Zayıf"
+            PictureBox1.ImageLocation = "zayif.jpg"
+        End If
+ 
+        'www.tasarimkodlama.com
+        If TxtVki.Text >= 20 And TxtVki.Text < 25 Then
+            TxtSonuc.Text = "İdeal sınırlarda"
+            PictureBox1.ImageLocation = "ideal.jpg"
+        End If
+ 
+        If TxtVki.Text >= 25 And TxtVki.Text < 30 Then
+            TxtSonuc.Text = "Hafif şişman"
+            PictureBox1.ImageLocation = "hafif-sisman.jpg"
+        End If
+ 
+        'www.tasarimkodlama.com
+        If TxtVki.Text >= 30 And TxtVki.Text < 35 Then
+            TxtSonuc.Text = "Şişman"
+            PictureBox1.ImageLocation = "sisman.jpg"
+        End If
+ 
+        If TxtVki.Text >= 35 And TxtVki.Text < 45 Then
+            TxtSonuc.Text = "Sağlık açısından önemli"
+            PictureBox1.ImageLocation = "tehlike.jpg"
+        End If
+ 
+        'www.tasarimkodlama.com
+        If TxtVki.Text >= 45 And TxtVki.Text < 50 Then
+            TxtSonuc.Text = "Aşırı şişman"
+            PictureBox1.ImageLocation = "cok-sisman.jpg"
+        End If
+ 
+        If TxtVki.Text >= 50 Then
+            TxtSonuc.Text = "Morbid (ölümcül) şişman"
+            PictureBox1.ImageLocation = "morbid.jpg"
+        End If
+    End Sub
+End Claski
